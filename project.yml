@@ -1,0 +1,34 @@
+name: LidarMap
+options:
+  bundleIdPrefix: com.hwee
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  LidarMap:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+    info:
+      path: Config/Info.plist
+      properties:
+        CFBundleDisplayName: LidarMap
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: "LidarMap dùng camera và cảm biến LiDAR để quét lưới 3D của căn phòng."
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.hwee.lidarmap
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
